@@ -2,6 +2,85 @@
   <head>
     <title>Online Petition</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style type="text/css">
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 19px;
+        line-height: 1.31579;
+        font-weight: 400;
+      }
+      #global-header {
+          background-color: #080;
+          padding-top: 15px;
+          margin-top: -1px;
+          margin-bottom: -1px;
+          padding-bottom: 15px;
+          color: white;
+         text-align: center;
+      }
+
+      #global-header h4 {
+        font-size: 24px
+      }
+      
+      #global-header h5 {
+        font-size: 14px
+      }
+
+      .container {
+        width:50%
+      }
+
+      .heading-secondary {
+
+        font-size: 24px;
+        line-height: 1.25;
+        font-weight: 400;
+        text-transform: none;
+        padding-top: 9px;
+        padding-bottom: 6px;
+        display: block;
+        color: #6f777b;
+      }
+   
+      label {
+         display: block
+      }
+
+      .button {
+            background-color: #080;
+            position: relative;
+            display: -moz-inline-stack;
+            display: inline-block;
+            padding: 0.3em 0.6em 0.2em 0.6em;
+            border: none;
+            border-radius: 0;
+            box-shadow: 0 2px 0 #003c00;
+            font-size: 1em;
+            line-height: 1.25;
+            text-decoration: none;
+            cursor: pointer;
+            color: #fff;
+            box-sizing: border-box;
+            margin: 0 0 15px 0;
+            padding: 0.41667em 0.625em;
+            vertical-align: top;
+            font-size: 24px;
+            line-height: 1.25;
+            font-weight: 700;
+            text-transform: none;
+            text-align: center;
+        }
+
+        footer {
+          border-top: 10px solid #080;
+          background-color: #dee0e2;
+          padding-top: 30px;
+          padding-bottom: 45px;
+          text-align: center
+      }
+
+    </style>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
@@ -54,11 +133,16 @@
     </script>
   </head>
   <body>
-
+    <header role="banner" id="global-header">
+      <div class="wrapper">
+          <h4>Petitions</h4>
+          <p class="strapline">(Not) UK Government and&nbsp;Parliament</p>
+      </div>
+    </header>
     <div class="container" id="petition">
-    
+      <span class="heading-secondary">Petition</span>
       <h1>Free ice cream should be provided as standard by all UK companies on a Friday afternoon</h1>
-      <h2>Ice Cream is really tasty and therefore should be provided to all UK Residents in fulltime employment to help raise the morale of the workforce and therefore improve the economy.</h2>
+      <p>Ice Cream is really tasty and therefore should be provided to all UK Residents in fulltime employment to help raise the morale of the workforce and therefore improve the economy.</p>
       <hr>
 
       <form id="petition">
@@ -316,7 +400,7 @@
           <input type="checkbox" name="citizen" id="citizen" value="1" required>
         </div>
 
-        <button type="submit" name="submit" id="submit">Sign Petition</button>
+        <button class="button" type="submit" name="submit" id="submit">Sign Petition</button>
 
       </form>
 
@@ -324,7 +408,11 @@
         <div id="bar" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
       </div> 
 
+
+
     </div>
+
+
 
     <div class="container hidden" id="success">
       
@@ -343,6 +431,12 @@
       </div>
 
     </div>
+
+    <footer id="footer" role="contentinfo">
+        <div class="wrapper">
+          This is not a real petition. It is just a demo for IBM Cloud Data Services.
+        </div>
+      </footer>
 
   </body>
 </html>
