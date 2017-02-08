@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title>Online Petition</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      
+    $(document).ready(function() {
+
+      var id = location.search.split("=")[1];
+      var data = {
+        id: (id ? id : null)
+      }
+
+      $.ajax({
+        type: "POST",
+        contentType: "application/json; charset=utf-8",
+        url: "https://846b1a9f-8a9c-446d-8e88-296cda4f8352-gws.api-gw.mybluemix.net/petition/confirm",
+        data: JSON.stringify(data),
+        dataType: "json"
+      })
+      .done(function() {
+        $("#waiting").addClass("hidden")
+        $("#success").removeClass("hidden")
+      })
+      .fail(function(req, status, err) {
+        $("#waiting").addClass("hidden")
+        $("#fail").removeClass("hidden")
+      })
+
+    });
+
+    </script>
+  </head>
+  <body>
+
+    <div class="container" id="waiting">
+      
+      <h1>Please wait while we verify your signature</h1>
+      <h2>This should only take a minute.</h2>
+      <hr>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+      </div>   
+
+    </div>
+
+    <div class="container hidden" id="success">
+      
+      <div class="alert alert-success" role="alert">
+        <h1>Thank you for signing</h1>
+        <h2>Your signature is now verified</h2>
+      </div>  
+
+    </div>
+
+    <div class="container hidden" id="fail">
+      
+      <div class="alert alert-danger" role="alert">
+        <h1>There was an error</h1>
+        <h2>Unfortunately we could not verify your signature at this time, please try again later</h2>
+      </div>
+
+    </div>
+
+  </body>
+</html>
