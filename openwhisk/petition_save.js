@@ -10,11 +10,9 @@
   * - dbname = the name of the database
   * - doc = the document to save
   * 
-  * @return which must be a JSON object.
-  *         It will be the output of this action.
+  * @return returns the documetn with its _id and _rev
   *
   */
-
 
 function main(params) {
   
