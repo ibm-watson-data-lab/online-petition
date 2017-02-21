@@ -19,10 +19,10 @@ Another handles what happens when the link on the confirmation is clicked:
 All of the above can be deployed without having any fixed computing hardware dedicated to you.
 
 All of the services can be started for free and operated (within time and load limits) for zero cost. To 
-handled larger volumes of traffic, smaller fees or pay-as-you-go charges will apply.
+handle larger volumes of traffic, smaller fees or pay-as-you-go charges will apply.
 
 OpenWhisk actions run singly or as a sequence of actions to handle form submissions and email verification links:
 
 ![schematic](https://raw.githubusercontent.com/ibm-cds-labs/online-petition/master/img/workflow3.png)
 
-See the page in action at https://ibm-cds-labs.github.io/online-petition/
+[Read why and how we created this app](https://medium.com/@glynn_bird/2779161c4c68#.4rrlf2nig). See the page in action at https://ibm-cds-labs.github.io/online-petition/
